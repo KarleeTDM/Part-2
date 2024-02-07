@@ -13,6 +13,7 @@ public class Knight : MonoBehaviour
     public float health;
     public float maxHealth = 5;
     bool isDead = false;
+    public HealthBar healthBar;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -46,6 +47,7 @@ public class Knight : MonoBehaviour
         if (isDead) return;
         clickingOnSelf = true;
         TakeDamage(1);
+        healthBar.TakeDamage(1);
     }
 
     private void OnMouseUp()
@@ -53,7 +55,7 @@ public class Knight : MonoBehaviour
         clickingOnSelf = false;
     }
 
-    void TakeDamage(float damage)
+    public void TakeDamage(float damage)
     {
         health -= damage;
         health = Mathf.Clamp(health, 0, maxHealth);
