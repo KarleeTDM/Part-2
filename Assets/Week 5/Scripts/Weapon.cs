@@ -19,7 +19,7 @@ public class Weapon : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        SendMessage("TakeDamage", 1);
+        Debug.Log("Collision detected.");
         Destroy(gameObject);
     }
 }

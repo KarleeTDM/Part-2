@@ -58,6 +58,12 @@ public class Knight : MonoBehaviour
         clickingOnSelf = false;
     }
 
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        Debug.Log("Collision detected.");
+        SendMessage("TakeDamage", 1);
+    }
+
     public void TakeDamage(float damage)
     {
         health -= damage;
