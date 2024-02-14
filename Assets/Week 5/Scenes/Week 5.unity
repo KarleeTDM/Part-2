@@ -1201,7 +1201,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f836500100734a42a4f987334674676, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefab: {fileID: 2137563361}
+  prefab: {fileID: 7340690951902538049, guid: 347cea70ac16f83418359da18958f6a9, type: 3}
   spawner: {fileID: 1992810734}
 --- !u!4 &1992810734
 Transform:
@@ -1218,11 +1218,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
---- !u!1 &2137563361 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7340690951902538049, guid: 347cea70ac16f83418359da18958f6a9, type: 3}
-  m_PrefabInstance: {fileID: 9201497041963901996}
-  m_PrefabAsset: {fileID: 0}
 --- !u!212 &559150363176772664
 SpriteRenderer:
   m_ObjectHideFlags: 0
