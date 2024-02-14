@@ -26,7 +26,7 @@ public class Weapon : MonoBehaviour
 
     IEnumerator WaitToDestroy()
     {
-        yield return new WaitForSeconds(20);
+        yield return new WaitForSeconds(25);
         Destroy(gameObject);
     }
 }

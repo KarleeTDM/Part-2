@@ -11,15 +11,16 @@ public class Knight : MonoBehaviour
     Vector2 movement;
     public float speed = 3;
     bool clickingOnSelf = false;
-    public float health;
-    public float maxHealth = 5;
+    public int health;
+    public int maxHealth = 5;
     bool isDead = false;
     public HealthBar healthBar;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
-        health = maxHealth;
+        health = PlayerPrefs.GetInt("KnightHealth", 5);
+        SendMessage("SetInitialHealth", health);
     }
 
     private void FixedUpdate()
@@ -64,10 +65,11 @@ public class Knight : MonoBehaviour
         SendMessage("TakeDamage", 1);
     }
 
-    public void TakeDamage(float damage)
+    public void TakeDamage(int damage)
     {
         health -= damage;
         health = Mathf.Clamp(health, 0, maxHealth);
+        PlayerPrefs.SetInt("KnightHealth", health);
         if (health <= 0)
         {
             isDead = true;
@@ -78,5 +80,10 @@ public class Knight : MonoBehaviour
             isDead = false;
             animator.SetTrigger("TakeDamage");
         }    
+    }
+
+    public void SetInitialHealth(int HP)
+    {
+        health = HP;
     }
 }

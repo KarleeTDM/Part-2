@@ -1425,11 +1425,11 @@ MonoBehaviour:
       - m_Target: {fileID: 5282039291042899384}
         m_TargetAssemblyTypeName: Knight, Assembly-CSharp
         m_MethodName: TakeDamage
-        m_Mode: 4
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: -5
           m_FloatArgument: -5
           m_StringArgument: 
           m_BoolArgument: 0
@@ -1437,11 +1437,11 @@ MonoBehaviour:
       - m_Target: {fileID: 5282039291042899386}
         m_TargetAssemblyTypeName: HealthBar, Assembly-CSharp
         m_MethodName: TakeDamage
-        m_Mode: 4
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: -5
           m_FloatArgument: -5
           m_StringArgument: 
           m_BoolArgument: 0

@@ -6,8 +6,13 @@ using UnityEngine.UI;
 public class HealthBar : MonoBehaviour
 {
     public Slider slider;
-    public void TakeDamage(float damage)
+    public void TakeDamage(int damage)
     {
         slider.value -= damage;
+    }
+
+    public void SetInitialHealth(int HP)
+    {
+        slider.value = HP;
     }
 }
