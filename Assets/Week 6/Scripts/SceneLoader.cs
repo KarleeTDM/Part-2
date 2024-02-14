@@ -11,4 +11,9 @@ public class SceneLoader : MonoBehaviour
         int nextSceneIndex = (currentScneIndex + 1) % SceneManager.sceneCountInBuildSettings;
         SceneManager.LoadScene(nextSceneIndex);
     }
+
+    public void LoadWeek5Scene()
+    {
+        SceneManager.LoadScene(0);
+    }
 }
