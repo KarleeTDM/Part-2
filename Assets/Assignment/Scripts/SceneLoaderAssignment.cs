@@ -11,4 +11,9 @@ public class SceneLoaderAssignment : MonoBehaviour
     {
         SceneManager.LoadScene(4);
     }
+
+    public void LoadGameScene()
+    {
+        SceneManager.LoadScene(5);
+    }
 }

@@ -22,6 +22,13 @@ public class KnightCustomizer : MonoBehaviour
     public Sprite whiteHeadSprite;
     public Sprite yellowHeadSprite;
     Sprite newSprite;
+    string colorPref;
+
+    private void Start()
+    {
+        colorPref = PlayerPrefs.GetString("KnightColor", "red");
+        ColorChange(colorPref);
+    }
 
     public void ColorChange(string color)
     {
@@ -87,11 +94,7 @@ public class KnightCustomizer : MonoBehaviour
                 newSprite = yellowBodySprite;
             }
         }
-        ChangeSprite();
-    }
-
-    void ChangeSprite()
-    {
+        PlayerPrefs.SetString("KnightColor", color);
         spriteRenderer.sprite = newSprite;
     }
 }
