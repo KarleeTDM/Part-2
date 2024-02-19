@@ -4,8 +4,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class KnightAssignment : MonoBehaviour
+public class KnightAssignment : MonoBehaviour // Now with comments! :D
 {
+    // important variables here
     Rigidbody2D rb;
     Animator animator;
     Vector2 destination;
@@ -18,6 +19,7 @@ public class KnightAssignment : MonoBehaviour
     public HealthBar healthBar;
     public AnimationCurve dead;
     float deathTimer;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -36,7 +38,9 @@ public class KnightAssignment : MonoBehaviour
             {
                 return;
             }
-            transform.localScale = Vector3.Lerp(transform.localScale, Vector3.zero, timing);
+            transform.localScale = Vector3.Lerp(transform.localScale, Vector3.zero, timing); // shrink to the size of an ant LOL
+            float angle = Mathf.Atan2(destination.x, destination.y) * Mathf.Rad2Deg; // obvi not on my planning but oh well
+            rb.rotation = -angle; // adding this because 1) it was one of my tasks and 2) the knight just wants to be silly :P
         }
         if (!isDead)
         {

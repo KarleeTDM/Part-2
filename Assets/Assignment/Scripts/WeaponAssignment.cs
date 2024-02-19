@@ -1,8 +1,8 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WeaponAssignment : MonoBehaviour
+public class WeaponAssignment : MonoBehaviour // F in the chat for this not going into the project because no dynamic Rigidbody2Ds allowed. 😔
 {
     Rigidbody2D rb;
     public float speed = 100f;
