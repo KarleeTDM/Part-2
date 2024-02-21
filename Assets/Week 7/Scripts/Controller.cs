@@ -11,6 +11,7 @@ public class Controller : MonoBehaviour
     public float maxCharge;
     Vector2 direction;
     public static Player CurrentSelection { get; private set; }
+    public static int score;
     public static void SetCurrentSelection(Player player)
     {
         if (CurrentSelection != null)
@@ -47,5 +48,9 @@ public class Controller : MonoBehaviour
         {
             direction = ((Vector2)Camera.main.ScreenToWorldPoint(Input.mousePosition) - (Vector2)CurrentSelection.transform.position).normalized * charge;
         }
+    }
+    public void IncreaseScore()
+    {
+        score += 1;
     }
 }
